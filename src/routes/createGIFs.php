@@ -14,6 +14,7 @@ $app->post('/api/Guggy/createGIFs', function ($request, $response, $args) {
     $query_str = $settings['api_url'];
 
     $body = array();
+    $body['sentence'] = $post_data['args']['sentence'];
 
 
     //requesting remote API
