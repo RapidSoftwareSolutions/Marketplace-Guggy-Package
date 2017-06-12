@@ -1,0 +1,82 @@
+{
+  "package": "Guggy",
+  "tagline": "Guggy API",
+  "description": "Guggy is the leader in smart predictive GIFs.",
+  "image": "http:\/\/logo.clearbit.com\/guggy.com",
+  "repo": "https:\/\/github.com\/RapidSoftwareSolutions\/Marketplace-Guggy-Package",
+  "keywords": [
+    "API",
+    "GIF",
+    "pictures"
+  ],
+  "accounts": {
+    "domain": "guggy.com",
+    "credentials": [
+      "apiKey"
+    ]
+  },
+  "blocks": [
+    {
+      "name": "createGIFs",
+      "description": "Get gifs based on sentence",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "credentials",
+          "info": "Your apiKey from Guggy",
+          "required": true
+        },
+        {
+          "name": "sentence",
+          "type": "String",
+          "info": "Sentence to get your gifs",
+          "required": true
+        },
+        {
+          "name": "lang",
+          "type": "String",
+          "info": "A two character ISO 639-1 language code that will direct Guggy to use a specific language when extracting context and trending content.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getTrendingGIFs",
+      "description": "Get trending gifs",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "credentials",
+          "info": "Your apiKey from Guggy",
+          "required": true
+        },
+        {
+          "name": "lang",
+          "type": "String",
+          "info": "A two character ISO 639-1 language code that will direct Guggy to use a specific language when extracting context and trending content.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    }
+  ]
+}
