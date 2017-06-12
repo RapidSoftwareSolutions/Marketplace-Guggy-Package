@@ -15,7 +15,9 @@ $app->post('/api/Guggy/createGIFs', function ($request, $response, $args) {
 
     $body = array();
     $body['sentence'] = $post_data['args']['sentence'];
-
+    if(!empty($post_data['args']['lang'])){
+        $body['lang'] = $post_data['args']['lang'];
+    }
 
     //requesting remote API
     $client = new GuzzleHttp\Client();

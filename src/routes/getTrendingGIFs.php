@@ -14,6 +14,9 @@ $app->post('/api/Guggy/getTrendingGIFs', function ($request, $response, $args) {
     $query_str = $settings['api_url'];
 
     $body = array();
+    if (!empty($post_data['args']['lang'])) {
+        $body['lang'] = $post_data['args']['lang'];
+    }
 
 
     //requesting remote API
